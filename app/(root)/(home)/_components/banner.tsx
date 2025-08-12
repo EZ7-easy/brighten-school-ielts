@@ -72,11 +72,11 @@ Place of study: ${values.school}
   };
 
   return (
-    <section className="relative w-full h-[650px] md:h-screen overflow-hidden">
+    <section className="relative w-full h-[400px] md:h-screen overflow-hidden">
       {/* Overlay Content */}
-      <div className="relative z-10 flex justify-center items-center h-full px-4 md:pr-12">
+      <div className="relative z-10 flex justify-center items-center h-[400px] px-4 md:pr-12">
         <div className="bg-gray-900/90 text-white backdrop-blur-md p-6 md:p-10 rounded-2xl shadow-lg w-full max-w-lg">
-          <p className="text-2xl md:text-3xl font-semibold mb-3">
+          <p className="text-2xl md:text-3xl font-semibold mb-6">
             Sign up for your first exam!
           </p>
 
