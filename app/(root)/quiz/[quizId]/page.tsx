@@ -9,143 +9,139 @@ interface Question {
   correct: string; // Stored as 'A', 'B', 'C', etc.
 }
 
-interface Quiz {
-  _id: string;
-  title: string;
-  questions: Question[];
-}
-
 const quiz = {
-  "_id": { "$oid": "66b9f1e5a0a1f20001a1b111" },
-  "title": "English Level Test",
-  "description": "20-question multiple-choice English grammar and vocabulary test",
-  "level": "B1-B2",
-  "questions": [
+  _id: { $oid: "66b9f1e5a0a1f20001a1b111" },
+  title: "English Level Test",
+  description:
+    "20-question multiple-choice English grammar and vocabulary test",
+  level: "B1-B2",
+  questions: [
     {
-      "question": "She ___ to school by bus every day.",
-      "options": ["go", "goes", "going", "gone"],
-      "correct": "B",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b201" }
+      question: "She ___ to school by bus every day.",
+      options: ["go", "goes", "going", "gone"],
+      correct: "B",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b201" },
     },
     {
-      "question": "I ___ in this city for ten years.",
-      "options": ["live", "lived", "have lived", "living"],
-      "correct": "C",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b202" }
+      question: "I ___ in this city for ten years.",
+      options: ["live", "lived", "have lived", "living"],
+      correct: "C",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b202" },
     },
     {
-      "question": "We will go out if it ___ tomorrow.",
-      "options": ["doesn’t rain", "won’t rain", "didn’t rain", "isn’t raining"],
-      "correct": "A",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b203" }
+      question: "We will go out if it ___ tomorrow.",
+      options: ["doesn’t rain", "won’t rain", "didn’t rain", "isn’t raining"],
+      correct: "A",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b203" },
     },
     {
-      "question": "By the time we arrived, they ___ dinner.",
-      "options": ["have finished", "finished", "had finished", "were finished"],
-      "correct": "C",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b204" }
+      question: "By the time we arrived, they ___ dinner.",
+      options: ["have finished", "finished", "had finished", "were finished"],
+      correct: "C",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b204" },
     },
     {
-      "question": "This is the ___ movie I’ve ever seen.",
-      "options": ["good", "better", "best", "most good"],
-      "correct": "C",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b205" }
+      question: "This is the ___ movie I’ve ever seen.",
+      options: ["good", "better", "best", "most good"],
+      correct: "C",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b205" },
     },
     {
-      "question": "The teacher made the students ___ the homework again.",
-      "options": ["do", "doing", "did", "does"],
-      "correct": "A",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b206" }
+      question: "The teacher made the students ___ the homework again.",
+      options: ["do", "doing", "did", "does"],
+      correct: "A",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b206" },
     },
     {
-      "question": "If I ___ more time, I would start a new hobby.",
-      "options": ["have", "had", "will have", "having"],
-      "correct": "B",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b207" }
+      question: "If I ___ more time, I would start a new hobby.",
+      options: ["have", "had", "will have", "having"],
+      correct: "B",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b207" },
     },
     {
-      "question": "There aren’t ___ chairs for everyone.",
-      "options": ["much", "many", "some", "a few"],
-      "correct": "B",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b208" }
+      question: "There aren’t ___ chairs for everyone.",
+      options: ["much", "many", "some", "a few"],
+      correct: "B",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b208" },
     },
     {
-      "question": "He is interested ___ learning foreign languages.",
-      "options": ["in", "at", "on", "for"],
-      "correct": "A",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b209" }
+      question: "He is interested ___ learning foreign languages.",
+      options: ["in", "at", "on", "for"],
+      correct: "A",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b209" },
     },
     {
-      "question": "They were tired ___ they went to bed early.",
-      "options": ["but", "so", "because", "although"],
-      "correct": "B",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b210" }
+      question: "They were tired ___ they went to bed early.",
+      options: ["but", "so", "because", "although"],
+      correct: "B",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b210" },
     },
     {
-      "question": "My grandfather is very ___; he always gives me advice and listens to me.",
-      "options": ["rude", "wise", "selfish", "noisy"],
-      "correct": "B",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b211" }
+      question:
+        "My grandfather is very ___; he always gives me advice and listens to me.",
+      options: ["rude", "wise", "selfish", "noisy"],
+      correct: "B",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b211" },
     },
     {
-      "question": "We decided to ___ a taxi because it was raining heavily.",
-      "options": ["take", "ride", "drive", "go"],
-      "correct": "A",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b212" }
+      question: "We decided to ___ a taxi because it was raining heavily.",
+      options: ["take", "ride", "drive", "go"],
+      correct: "A",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b212" },
     },
     {
-      "question": "The weather in this country is very ___.",
-      "options": ["unpredictable", "permanent", "usual", "regular"],
-      "correct": "A",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b213" }
+      question: "The weather in this country is very ___.",
+      options: ["unpredictable", "permanent", "usual", "regular"],
+      correct: "A",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b213" },
     },
     {
-      "question": "I can’t ___ to buy that car — it’s too expensive.",
-      "options": ["pay", "spend", "afford", "cost"],
-      "correct": "C",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b214" }
+      question: "I can’t ___ to buy that car — it’s too expensive.",
+      options: ["pay", "spend", "afford", "cost"],
+      correct: "C",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b214" },
     },
     {
-      "question": "Please be quiet. The baby is ___.",
-      "options": ["sleeping", "asleep", "sleepy", "sleeps"],
-      "correct": "B",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b215" }
+      question: "Please be quiet. The baby is ___.",
+      options: ["sleeping", "asleep", "sleepy", "sleeps"],
+      correct: "B",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b215" },
     },
     {
-      "question": "The opposite of “borrow” is ___.",
-      "options": ["lend", "take", "give", "send"],
-      "correct": "A",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b216" }
+      question: "The opposite of “borrow” is ___.",
+      options: ["lend", "take", "give", "send"],
+      correct: "A",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b216" },
     },
     {
-      "question": "I haven’t seen her ___ last summer.",
-      "options": ["since", "for", "from", "by"],
-      "correct": "A",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b217" }
+      question: "I haven’t seen her ___ last summer.",
+      options: ["since", "for", "from", "by"],
+      correct: "A",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b217" },
     },
     {
-      "question": "This bag is too heavy. Can you help me ___ it?",
-      "options": ["carry", "bring", "take", "lift"],
-      "correct": "A",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b218" }
+      question: "This bag is too heavy. Can you help me ___ it?",
+      options: ["carry", "bring", "take", "lift"],
+      correct: "A",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b218" },
     },
     {
-      "question": "We are looking forward ___ you again.",
-      "options": ["see", "seeing", "to see", "to seeing"],
-      "correct": "D",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b219" }
+      question: "We are looking forward ___ you again.",
+      options: ["see", "seeing", "to see", "to seeing"],
+      correct: "D",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b219" },
     },
     {
-      "question": "The test was ___ difficult than I expected.",
-      "options": ["much", "more", "most", "many"],
-      "correct": "B",
-      "_id": { "$oid": "66b9f1e5a0a1f20001a1b220" }
-    }
+      question: "The test was ___ difficult than I expected.",
+      options: ["much", "more", "most", "many"],
+      correct: "B",
+      _id: { $oid: "66b9f1e5a0a1f20001a1b220" },
+    },
   ],
-  "createdAt": { "$date": "2025-08-13T10:00:00.000Z" },
-  "updatedAt": { "$date": "2025-08-13T10:00:00.000Z" },
-  "__v": 0
-}
+  createdAt: { $date: "2025-08-13T10:00:00.000Z" },
+  updatedAt: { $date: "2025-08-13T10:00:00.000Z" },
+  __v: 0,
+};
 
 type UserData = {
   name: string;
@@ -157,16 +153,16 @@ type UserData = {
 export default function QuizPage() {
   const { quizId } = useParams();
   const router = useRouter();
-  
+
   const [userData, setUserData] = useState<UserData | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
-  
+
   const totalQuestions = quiz.questions.length;
   const currentQuestion = quiz.questions[currentQuestionIndex];
   const progress = (currentQuestionIndex / totalQuestions) * 100;
-  
+
   // Ensure user data exists before starting quiz
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -181,38 +177,47 @@ export default function QuizPage() {
       router.replace("/");
     }
   }, [router]);
-  
+
   const handleNext = useCallback(() => {
     if (selectedOption === null) return;
-    
+
     const correctIndex = currentQuestion.correct.charCodeAt(0) - 65;
     const isCorrect = selectedOption === correctIndex;
     const updatedScore = isCorrect ? score + 1 : score;
-    
+
     if (currentQuestionIndex < totalQuestions - 1) {
       setScore(updatedScore);
       setCurrentQuestionIndex((prev) => prev + 1);
       setSelectedOption(null);
     } else {
       if (!userData) return;
-      
+
       const finalData = { ...userData, score: updatedScore };
-      
+
       fetch("/api/send-to-telegram", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(finalData),
       }).finally(() => {
         localStorage.removeItem("userData");
-        router.push(`/quiz/${quizId}/results?score=${updatedScore}&total=${totalQuestions}`);
+        router.push(
+          `/quiz/${quizId}/results?score=${updatedScore}&total=${totalQuestions}`
+        );
       });
     }
-  }, [selectedOption, currentQuestionIndex, score, totalQuestions, currentQuestion, router, quizId, userData]);
-  
+  }, [
+    selectedOption,
+    currentQuestionIndex,
+    score,
+    totalQuestions,
+    currentQuestion,
+    router,
+    quizId,
+    userData,
+  ]);
+
   if (!userData) return null; // Prevent render until data is loaded
-  
-  
-  
+
   return (
     <div className="container mx-auto py-8 max-w-2xl">
       <div className="flex justify-between items-center mb-6">
