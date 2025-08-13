@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
+import { useRouter } from 'next/navigation'
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -28,6 +27,7 @@ import { contactSchema } from "@/lib/validation";
 
 function Banner() {
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -37,41 +37,13 @@ function Banner() {
       school: "",
     },
   });
-
+  
   const onSubmit = (values: z.infer<typeof contactSchema>) => {
-    setIsLoading(true);
-
-    const telegramBotId = "8026261514:AAHiQ0nCdNVInbpcM_6Lu2w_iYMMpZiNyRE";
-    const telegramChatId = "1764737921";
-
-    const promise = fetch(
-      `https://api.telegram.org/bot${telegramBotId}/sendMessage`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: telegramChatId,
-          text: `
-Name: ${values.name}
-Tel: ${values.tel}
-Place of study: ${values.school}
-          `,
-        }),
-      }
-    )
-      .then(() => form.reset())
-      .finally(() => setIsLoading(false));
-
-    toast.promise(promise, {
-      loading: "Loading...",
-      success: "Success",
-      error: "Error",
-    });
-  };
-
-  return (
+    localStorage.setItem("userData", JSON.stringify(values));
+    router.push("/quiz/1");
+  }
+    
+    return (
     <section className="relative w-full h-[400px] md:h-screen overflow-hidden">
       {/* Overlay Content */}
       <div className="relative z-10 flex justify-center items-center h-[400px] px-4 md:pr-12">
@@ -157,7 +129,7 @@ Place of study: ${values.school}
                 type="submit"
                 className="w-full h-12 text-xl bg-[#004ff9] hover:bg-[#0033cc] transition rounded-md"
               >
-                Sign up
+                GO TO TEST
               </Button>
             </form>
           </Form>
@@ -167,4 +139,4 @@ Place of study: ${values.school}
   );
 }
 
-export default Banner;
+export default Banner
