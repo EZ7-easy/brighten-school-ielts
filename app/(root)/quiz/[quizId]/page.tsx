@@ -10,138 +10,139 @@ interface Question {
 }
 
 const quiz = {
-  _id: { $oid: "66b9f1e5a0a1f20001a1b111" },
-  title: "English Level Test",
-  description:
-    "20-question multiple-choice English grammar and vocabulary test",
-  level: "B1-B2",
-  questions: [
-    {
-      question: "She ___ to school by bus every day.",
-      options: ["go", "goes", "going", "gone"],
-      correct: "B",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b201" },
-    },
-    {
-      question: "I ___ in this city for ten years.",
-      options: ["live", "lived", "have lived", "living"],
-      correct: "C",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b202" },
-    },
-    {
-      question: "We will go out if it ___ tomorrow.",
-      options: ["doesn’t rain", "won’t rain", "didn’t rain", "isn’t raining"],
-      correct: "A",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b203" },
-    },
-    {
-      question: "By the time we arrived, they ___ dinner.",
-      options: ["have finished", "finished", "had finished", "were finished"],
-      correct: "C",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b204" },
-    },
-    {
-      question: "This is the ___ movie I’ve ever seen.",
-      options: ["good", "better", "best", "most good"],
-      correct: "C",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b205" },
-    },
-    {
-      question: "The teacher made the students ___ the homework again.",
-      options: ["do", "doing", "did", "does"],
-      correct: "A",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b206" },
-    },
-    {
-      question: "If I ___ more time, I would start a new hobby.",
-      options: ["have", "had", "will have", "having"],
-      correct: "B",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b207" },
-    },
-    {
-      question: "There aren’t ___ chairs for everyone.",
-      options: ["much", "many", "some", "a few"],
-      correct: "B",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b208" },
-    },
-    {
-      question: "He is interested ___ learning foreign languages.",
-      options: ["in", "at", "on", "for"],
-      correct: "A",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b209" },
-    },
-    {
-      question: "They were tired ___ they went to bed early.",
-      options: ["but", "so", "because", "although"],
-      correct: "B",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b210" },
-    },
-    {
-      question:
-        "My grandfather is very ___; he always gives me advice and listens to me.",
-      options: ["rude", "wise", "selfish", "noisy"],
-      correct: "B",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b211" },
-    },
-    {
-      question: "We decided to ___ a taxi because it was raining heavily.",
-      options: ["take", "ride", "drive", "go"],
-      correct: "A",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b212" },
-    },
-    {
-      question: "The weather in this country is very ___.",
-      options: ["unpredictable", "permanent", "usual", "regular"],
-      correct: "A",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b213" },
-    },
-    {
-      question: "I can’t ___ to buy that car — it’s too expensive.",
-      options: ["pay", "spend", "afford", "cost"],
-      correct: "C",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b214" },
-    },
-    {
-      question: "Please be quiet. The baby is ___.",
-      options: ["sleeping", "asleep", "sleepy", "sleeps"],
-      correct: "B",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b215" },
-    },
-    {
-      question: "The opposite of “borrow” is ___.",
-      options: ["lend", "take", "give", "send"],
-      correct: "A",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b216" },
-    },
-    {
-      question: "I haven’t seen her ___ last summer.",
-      options: ["since", "for", "from", "by"],
-      correct: "A",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b217" },
-    },
-    {
-      question: "This bag is too heavy. Can you help me ___ it?",
-      options: ["carry", "bring", "take", "lift"],
-      correct: "A",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b218" },
-    },
-    {
-      question: "We are looking forward ___ you again.",
-      options: ["see", "seeing", "to see", "to seeing"],
-      correct: "D",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b219" },
-    },
-    {
-      question: "The test was ___ difficult than I expected.",
-      options: ["much", "more", "most", "many"],
-      correct: "B",
-      _id: { $oid: "66b9f1e5a0a1f20001a1b220" },
-    },
-  ],
-  createdAt: { $date: "2025-08-13T10:00:00.000Z" },
-  updatedAt: { $date: "2025-08-13T10:00:00.000Z" },
-  __v: 0,
+    _id: { $oid: "66b9f1e5a0a1f20001a1b111" },
+    title: "English Level Test",
+    description:
+        "20-question multiple-choice English grammar and vocabulary test",
+    level: "B1-B2",
+    questions: [
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b201" },
+            question: "You __ wear a helmet when riding a bike.",
+            options: ["must", "can", "will", "may", "I don't know"],
+            correct: "A",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b202" },
+            question: "This bag is __ than that one.",
+            options: ["heavy", "more heavy", "heavier", "heaviest", "I don't know"],
+            correct: "C",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b203" },
+            question: "If it rains tomorrow, we __ stay home.",
+            options: ["will", "would", "can", "might", "I don't know"],
+            correct: "A",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b204" },
+            question: "The letter __ by the postman every day.",
+            options: ["delivers", "delivered", "is delivered", "was delivered", "I don't know"],
+            correct: "C",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b205" },
+            question: "She __ speak three languages.",
+            options: ["can", "must", "should", "might", "I don't know"],
+            correct: "A",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b206" },
+            question: "Which is __, the red dress or the blue one?",
+            options: ["more beautiful", "beautiful", "most beautiful", "beautifuller", "I don't know"],
+            correct: "A",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b207" },
+            question: "I don’t have __ money left.",
+            options: ["many", "much", "a lot", "some", "I don't know"],
+            correct: "B",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b208" },
+            question: "We __ eaten dinner when the guests arrived.",
+            options: ["already", "have", "has", "had", "I don't know"],
+            correct: "D",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b209" },
+            question: "You should __ more water every day.",
+            options: ["drink", "drank", "drinking", "drinks", "I don't know"],
+            correct: "A",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b210" },
+            question: "If I were you, I __ tell her the truth.",
+            options: ["will", "would", "can", "might", "I don't know"],
+            correct: "B",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b211" },
+            question: "They __ watching TV when I called.",
+            options: ["was", "were", "is", "are", "I don't know"],
+            correct: "B",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b212" },
+            question: "I’ve been living here __ five years.",
+            options: ["since", "for", "from", "ago", "I don't know"],
+            correct: "B",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b213" },
+            question: "The cake __ made by my mother.",
+            options: ["is", "are", "was", "were", "I don't know"],
+            correct: "A",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b214" },
+            question: "How many __ do you want?",
+            options: ["apple", "apples", "appleses", "apple’s", "I don't know"],
+            correct: "B",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b215" },
+            question: "You __ smoke in this area. It’s forbidden.",
+            options: ["mustn’t", "can’t", "shouldn’t", "don’t", "I don't know"],
+            correct: "A",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b216" },
+            question: "He said he __ come to the meeting.",
+            options: ["will", "would", "can", "must", "I don't know"],
+            correct: "B",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b217" },
+            question: "This is the __ movie I have ever seen.",
+            options: ["bad", "worse", "worst", "more bad", "I don't know"],
+            correct: "C",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b218" },
+            question: "They __ finish the work by 5 pm yesterday.",
+            options: ["must", "had to", "should", "can", "I don't know"],
+            correct: "B",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b219" },
+            question: "What __ you do if you won the lottery?",
+            options: ["will", "would", "can", "must", "I don't know"],
+            correct: "B",
+        },
+        {
+            _id: { $oid: "66b9f1e5a0a1f20001a1b220" },
+            question: "The windows __ cleaned every week.",
+            options: ["is", "are", "be", "was", "I don't know"],
+            correct: "B",
+        },
+    ],
+    createdAt: { $date: "2025-08-13T10:00:00.000Z" },
+    updatedAt: { $date: "2025-08-13T10:00:00.000Z" },
+    __v: 0,
 };
+
+
 
 type UserData = {
   name: string;
