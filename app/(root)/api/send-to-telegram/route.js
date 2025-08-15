@@ -3,8 +3,8 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
 	const { name, tel, school, score,  } = await req.json();
 	
-	const TELEGRAM_TOKEN = "8026261514:AAHiQ0nCdNVInbpcM_6Lu2w_iYMMpZiNyRE";
-	const CHAT_ID = '1764737921';
+	const TELEGRAM_TOKEN = "8466255722:AAHe7pnlWaR0HkIb3eqXcmPXfiYRoD8hbmI";
+	const CHAT_ID = '2019586541';
 	const message = `📚 New Signup:
 	Name: ${name}
 	Phone: ${tel}

@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import LoadingButton from "@/components/shared/LoadingButton";
 
 interface Question {
   question: string;
@@ -154,6 +155,7 @@ type UserData = {
 export default function QuizPage() {
   const { quizId } = useParams();
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   const [userData, setUserData] = useState<UserData | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -164,7 +166,7 @@ export default function QuizPage() {
   const currentQuestion = quiz.questions[currentQuestionIndex];
   const progress = (currentQuestionIndex / totalQuestions) * 100;
 
-  // Ensure user data exists before starting quiz
+    // Ensure user data exists before starting quiz
   useEffect(() => {
     if (typeof window === "undefined") return;
     const rawData = localStorage.getItem("userData");
@@ -179,43 +181,40 @@ export default function QuizPage() {
     }
   }, [router]);
 
-  const handleNext = useCallback(() => {
-    if (selectedOption === null) return;
+    const handleButtonClick = async () => {
+        setLoading(true);
 
-    const correctIndex = currentQuestion.correct.charCodeAt(0) - 65;
-    const isCorrect = selectedOption === correctIndex;
-    const updatedScore = isCorrect ? score + 1 : score;
+        // Simulate delay so user sees loading
+        await new Promise((resolve) => setTimeout(resolve, 300));
 
-    if (currentQuestionIndex < totalQuestions - 1) {
-      setScore(updatedScore);
-      setCurrentQuestionIndex((prev) => prev + 1);
-      setSelectedOption(null);
-    } else {
-      if (!userData) return;
+        const correctIndex = currentQuestion.correct.charCodeAt(0) - 65;
+        const isCorrect = selectedOption === correctIndex;
+        const updatedScore = isCorrect ? score + 1 : score;
 
-      const finalData = { ...userData, score: updatedScore };
+        if (currentQuestionIndex < totalQuestions - 1) {
+            // Go to next question
+            setScore(updatedScore);
+            setCurrentQuestionIndex((prev) => prev + 1);
+            setSelectedOption(null);
+            setLoading(false);
+        } else {
+            // Last question → send results
+            if (!userData) return;
+            const finalData = { ...userData, score: updatedScore };
 
-      fetch("/api/send-to-telegram", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(finalData),
-      }).finally(() => {
-        localStorage.removeItem("userData");
-        router.push(
-          `/quiz/${quizId}/results?score=${updatedScore}&total=${totalQuestions}`
-        );
-      });
-    }
-  }, [
-    selectedOption,
-    currentQuestionIndex,
-    score,
-    totalQuestions,
-    currentQuestion,
-    router,
-    quizId,
-    userData,
-  ]);
+            await fetch("/api/send-to-telegram", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(finalData),
+            });
+
+            localStorage.removeItem("userData");
+            router.push(
+                `/quiz/${quizId}/results?score=${updatedScore}&total=${totalQuestions}`
+            );
+        }
+    };
+
 
   if (!userData) return null; // Prevent render until data is loaded
 
@@ -263,15 +262,18 @@ export default function QuizPage() {
       )}
 
       <div className="flex justify-end">
-        <Button
-          onClick={handleNext}
-          disabled={selectedOption === null}
-          className="min-w-[150px]"
-        >
-          {currentQuestionIndex === totalQuestions - 1
-            ? "Finish Quiz"
-            : "Next Question"}
-        </Button>
+          <Button
+              onClick={handleButtonClick}
+              disabled={selectedOption === null || loading}
+              className="min-w-[150px]"
+          >
+              {loading
+                  ? <LoadingButton/>
+                  : currentQuestionIndex === totalQuestions - 1
+                      ? "Finish Quiz"
+                      : "Next Question"}
+          </Button>
+
       </div>
     </div>
   );
