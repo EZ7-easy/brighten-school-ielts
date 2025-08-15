@@ -49,7 +49,7 @@ function Banner() {
       <div className="relative z-10 flex justify-center items-center h-[400px] px-4 md:pr-12">
         <div className="bg-gray-900/90 text-white backdrop-blur-md p-6 md:p-10 rounded-2xl shadow-lg w-full max-w-lg">
           <p className="text-2xl md:text-3xl font-semibold mb-6">
-            Sign up for your first exam!
+            Birinchi imtihoningizga yoziling!
           </p>
 
           <Form {...form}>
@@ -62,7 +62,7 @@ function Banner() {
                     <FormControl>
                       <Input
                         type="text"
-                        placeholder="Ваше имя"
+                        placeholder="F.I.SH"
                         className="h-12 text-black bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#004ff9]"
                         {...field}
                       />
@@ -80,7 +80,7 @@ function Banner() {
                     <FormControl>
                       <Input
                         type="tel"
-                        placeholder="99 999 99 99"
+                        placeholder="Telefon raqam"
                         className="h-12 text-black bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#004ff9]"
                         {...field}
                       />
@@ -103,7 +103,7 @@ function Banner() {
                         <SelectTrigger className="w-full min-h-12 py-2 text-base text-gray-500 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#004ff9]">
                           {/* SelectValue o‘rniga custom div */}
                           <div className="whitespace-normal break-words leading-snug text-left">
-                            {field.value || "Place of Study"}
+                            {field.value || "O'qish joyi"}
                           </div>
                         </SelectTrigger>
                         <SelectContent>
@@ -129,7 +129,7 @@ function Banner() {
                 type="submit"
                 className="w-full h-12 text-xl bg-[#004ff9] hover:bg-[#0033cc] transition rounded-md"
               >
-                GO TO TEST
+                TESTGA KIRISH
               </Button>
             </form>
           </Form>

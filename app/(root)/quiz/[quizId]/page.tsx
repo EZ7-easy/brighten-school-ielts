@@ -270,8 +270,8 @@ export default function QuizPage() {
               {loading
                   ? <LoadingButton/>
                   : currentQuestionIndex === totalQuestions - 1
-                      ? "Finish Quiz"
-                      : "Next Question"}
+                      ? "Testni Tugatish"
+                      : "Keyingi Savol"}
           </Button>
 
       </div>

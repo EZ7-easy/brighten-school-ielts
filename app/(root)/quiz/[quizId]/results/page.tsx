@@ -69,7 +69,7 @@ export default function ResultsPage() {
       <div className="container mx-auto py-8 max-w-md">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center">Quiz Results</CardTitle>
+            <CardTitle className="text-center">Test javoblari!</CardTitle>
           </CardHeader>
           <CardContent className="text-center">
             <div className="text-5xl font-bold mb-6">
@@ -91,7 +91,7 @@ export default function ResultsPage() {
 
             <Link href={"/"}>
               <Button className="text-md bg-blue-900">
-                RETURN TO MAIN PAGE
+                BOSH SAHIFAGA QAYTISH
               </Button>
             </Link>
           </CardContent>
