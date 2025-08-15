@@ -166,7 +166,7 @@ export default function QuizPage() {
   const currentQuestion = quiz.questions[currentQuestionIndex];
   const progress = (currentQuestionIndex / totalQuestions) * 100;
 
-    // Ensure user data exists before starting quiz
+
   useEffect(() => {
     if (typeof window === "undefined") return;
     const rawData = localStorage.getItem("userData");
