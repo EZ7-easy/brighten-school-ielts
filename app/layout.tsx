@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Brighten School",
     description:
         "Brighten School - create your future with us!",
-    authors: [{ name: "Ilkham Sabirov", url: "https://brightenschool.uz" }],
+    authors: [{ name: "", url: "https://brightenschool.uz" }],
     icons: { icon: "/logo.svg" },
     openGraph: {
         title: "Brighten School",
