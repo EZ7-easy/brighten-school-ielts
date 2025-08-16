@@ -28,18 +28,17 @@ export default function ResultsPage() {
   }, [router]);
 
   const percentage = Math.round((score / total) * 100);
-  const resultMessage =
-    percentage >= 90
-      ? "Advanced (C1/C2)"
-      : percentage >= 70
-      ? "Upper-Intermediate (B2)"
-      : percentage >= 50
-      ? "Intermediate (B1)"
-      : percentage >= 30
-      ? "Pre-Intermediate (A2)"
-      : "Beginner / Elementary (A1)";
+    const resultMessage =
+        percentage >= 85
+            ? "B1 (Intermediate)"
+            : percentage >= 65
+                ? "A2+ (High Elementary)"
+                : percentage >= 40
+                    ? "A2 (Elementary)"
+                    : "A1 (Beginner)";
 
-  const [sent, setSent] = useState(false);
+
+    const [sent, setSent] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined" || sent) return;
