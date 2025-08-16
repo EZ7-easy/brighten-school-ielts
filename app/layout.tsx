@@ -14,7 +14,7 @@ export const metadata: Metadata = {
             "Brighten School - create your future with us!",
         type: "website",
         url: "https://brightenschool.uz",
-        images: "/og-image.webp",
+        images: "https://opengraph.b-cdn.net/production/images/0d190e7f-9a65-4eae-bc09-c8d0e0e912f9.png?token=5r0yj2RyoWj1_6VgIspEfFhVg5un1dz6NmL0NIZTb-0&height=630&width=1120&expires=33291346433",
         countryName: "Uzbekistan",
         siteName: "Brighten School",
     },
