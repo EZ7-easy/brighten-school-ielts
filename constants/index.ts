@@ -51,7 +51,20 @@ export const school = [
         { "name": "24-sonli Maktab Navoiy Shahar" },
         { "name": "25-sonli Maktab Navoiy Shahar" },
         { "name": "26-sonli Maktab Navoiy Shahar" },
-        { "name": "27-sonli Maktab Navoiy Shahar" }
+        { "name": "27-sonli Maktab Navoiy Shahar" },
 
+        { "name": "1-sonli Maktab Karmana Tumani" },
+        { "name": "6-sonli Maktab Karmana Tumani" },
+        { "name": "10-sonli Maktab Karmana Tumani" },
+        { "name": "17-sonli Maktab Karmana Tumani" },
+        { "name": "20-sonli Maktab Karmana Tumani" },
+        { "name": "22-sonli Hamza Umarov nomidagi Maktab Karmana Tumani" },
+        { "name": "28-sonli Maktab Karmana Tumani" },
+        { "name": "2-IATIDUM (ixtisoslashtirilgan maktab) Karmana Tumani" },
+        { "name": "Karmana tumani kasb-hunar maktabi" },
 
+        {"name": "Sharq universiteti"},
+        {"name": "Navoiy davlat konchilik va texnologiyalar universiteti"},
+        {"name": "Profi universiteti"},
+        {"name": "Navoiy davlat universiteti"},
 ];
